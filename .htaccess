@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^ /index.php [L]
+#RewriteRule ^profilepage/([0-9a-zA-Z.]+) profilepage.php?user=$1 [NC,L]
+
+ErrorDocument 400 /phpiggy/public/error.php?status=400
+ErrorDocument 401 /phpiggy/public/error.php?status=401
+ErrorDocument 403 /phpiggy/public/error.php?status=403
+ErrorDocument 404 /phpiggy/public/error.php?status=404
+ErrorDocument 408 /phpiggy/public/error.php?status=408
+ErrorDocument 500 /phpiggy/public/error.php?status=500
+ErrorDocument 502 /phpiggy/public/error.php?status=502
+ErrorDocument 504 /phpiggy/public/error.php?status=504

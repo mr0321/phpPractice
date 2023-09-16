@@ -4,7 +4,7 @@
 		<title>error page</title>
 		<meta charset="UTF-8">
 		<meta enctype="UTF-8">
-		<base href="/iti0205/prax3/"></base>
+		<base href="/phpiggy/public/"></base>
 		<meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
 		<style>
 			body {
@@ -47,18 +47,18 @@
 		}
 		//RewriteRule ^profilepage/([0-9a-zA-Z.]+) profilepage.php?user=$1 [NC,L]
 		echo "<div>
-						<p>Well... that is for that.</p>
+						<p>Well... this is for that.</p>
 						<p>At least the idea was good.</p>
 					</div>";
 		if ($title && strlen($status) == 3) {
 			echo "<div>
-							<p>So, the official statement from system is:</p>
+							<p>So, the official statement from the system is:</p>
 								<p> <i>Error number: " . $title . "</i></p>
 								<p> In other words: <i>" . $message . "</i></p>
 						</div>";
 					}
 				echo "<div>
-							<p>What would you say if we just head back to the
+							<p>What would you say if we would just head back to the
 							 <a href='index.php'>HOME PAGE</a>?</p>
 							</div>";
 		 ?>
