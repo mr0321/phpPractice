@@ -1,6 +1,7 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^ /index.php [L]
 #RewriteRule ^profilepage/([0-9a-zA-Z.]+) profilepage.php?user=$1 [NC,L]
 
