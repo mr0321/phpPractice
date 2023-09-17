@@ -20,3 +20,8 @@ For using phpiggy.local add following to the end of C:\Windows\System32\Drivers\
 # XAMPP Virutal Hosts
 127.0.0.1 phpiggy.local
 ```
+
+For reloading composer use 
+```
+composer dump-autoload
+```
