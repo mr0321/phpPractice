@@ -32,3 +32,8 @@ Running scripts:
 ```
 composer run-script phpiggy 
 ```
+
+Add php environment variables 
+```
+composer require vlucas/phpdotenv
+```
