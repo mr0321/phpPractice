@@ -25,3 +25,10 @@ For reloading composer use
 ```
 composer dump-autoload
 ```
+
+For enabling the database connections check that extention=pdo_mysql is enabled (not commented out) in php.ini
+
+Running scripts:
+```
+composer run-script phpiggy 
+```
