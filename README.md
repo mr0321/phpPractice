@@ -28,7 +28,7 @@ composer dump-autoload
 
 For enabling the database connections check that extention=pdo_mysql is enabled (not commented out) in php.ini
 
-Running scripts:
+Running scripts (cli.php):
 ```
 composer run-script phpiggy 
 ```
