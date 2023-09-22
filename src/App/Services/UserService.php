@@ -36,13 +36,13 @@ class UserService
         $this->db->query(
             "INSERT INTO users(email,password,age,country,social_media_url)
                 VALUES(:email, :password, :age, :country, :url)",
-                        [
-                            'email' => $formData['email'],
-                            'password' => $password,
-                            'age' => $formData['age'],
-                            'country' => $formData['country'],
-                            'url' => $formData['socialMediaURL']
-                        ]
+            [
+                'email' => $formData['email'],
+                'password' => $password,
+                'age' => $formData['age'],
+                'country' => $formData['country'],
+                'url' => $formData['socialMediaURL']
+            ]
         );
 
         session_regenerate_id();
@@ -71,7 +71,19 @@ class UserService
 
     public function logout()
     {
-        unset($_SESSION['user']);
-        session_regenerate_id();
+        // unset($_SESSION['user']);
+        session_destroy();
+
+        // session_regenerate_id();
+        $params = session_get_cookie_params();
+        setcookie(
+            'PHPSESSID',
+            '',
+            time() - 3600,
+            $params['path'],
+            $params['domain'],
+            $params['secure'],
+            $params['httponly']
+        );
     }
 }
